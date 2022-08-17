@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { CONTENTFULsvg, CSSsvg, Gatsbysvg, GITHUBsvg, HTMLsvg, JSsvg, NETLIFYsvg, NODEsvg, REACTsvg, SASSsvg, STYLEDCOMPSsvg, VSCODEsvg } from '../../assets/SVG';
 import { ProjectsHeader } from '../Projects';
+import { motion } from 'framer-motion';
 
 const SVGwrapper = styled.div`
     height: 100px;
@@ -39,7 +40,10 @@ const TechStack = () => {
     const techIconItems = techIconList.map((item) => <Tooltip title={item.tooltip} TransitionComponent={Zoom} enterDelay={150} placement="bottom" arrow><SVGwrapper key={item.id}>{item.tech}</SVGwrapper></Tooltip>)
     return (
         <div>
-            <ProjectsHeader>
+            <ProjectsHeader as={motion.div}
+        initial={{opacity:0, transition: {delay:3}}}
+        animate={{opacity:1}}
+        exit={{opacity:0 , transition: {ease: "ease-all",duration: 0.1}}}>
                 <h2>My Tech & Tools</h2>
                 <div></div>
             </ProjectsHeader>

@@ -1,8 +1,10 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components'
+import { motion } from 'framer-motion';
 
 const ProjectsWrapper = styled.div`
     min-height: 300px;
+    /* position: absolute; */
 `
 
 const rainbow = keyframes`
@@ -35,7 +37,10 @@ export const ProjectsContent = styled.div`
 `
 const Projects = () => {
     return (
-        <ProjectsWrapper>
+        <ProjectsWrapper as={motion.div}
+        initial={{opacity:0, transition: {delay:3}}}
+        animate={{opacity:1}}
+        exit={{opacity:0 , transition: {ease: "ease-all",duration:0.1}}}>
             <ProjectsHeader>
                 <h2>My projects</h2>
                 <div></div>

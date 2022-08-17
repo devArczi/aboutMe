@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from 'framer-motion';
 
 const HeaderWrapper = styled.div`
     height: 600px;
     border: 2px solid red;
     box-sizing: border-box;
-    position: relative;
+    /* position: relative; */
 `
 const MyImg = styled.div`
     height: 200px;
@@ -44,7 +45,11 @@ const HeaderDescription = styled.div`
 `
 const Header = () =>{
     return(
-        <HeaderWrapper>
+        <HeaderWrapper as={motion.div}
+        initial={{opacity:0, transition: {duration:5.1}}}
+        animate={{opacity:1}}
+        exit={{opacity:0 , transition: {ease: "ease-all",duration:0.001}}}
+        >
             <ContentHeader>
                 <MyImg>
 
