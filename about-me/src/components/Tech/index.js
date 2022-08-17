@@ -23,20 +23,20 @@ const TechWrapper = styled.div`
 `
 const TechStack = () => {
     const techIconList = [
-        {tech : <HTMLsvg/>, tooltip: "HTML"},
-        {tech : <CSSsvg/>, tooltip: "CSS"},
-        {tech : <JSsvg/>, tooltip: "JS"},
-        {tech : <NODEsvg/>, tooltip: "NODEjs"},
-        {tech : <REACTsvg/>, tooltip: "React"},
-        {tech : <Gatsbysvg/>, tooltip: "Gatsby"},
-        {tech : <STYLEDCOMPSsvg/>, tooltip: "Styled Components"},
-        {tech : <SASSsvg/>, tooltip: "SASS"},
-        {tech : <VSCODEsvg/>, tooltip: "VSCODE"},
-        {tech : <CONTENTFULsvg/>, tooltip: "Contentful"},
-        {tech : <GITHUBsvg/>, tooltip: "GitHub"},
-        {tech : <NETLIFYsvg/>, tooltip: "Netlify"},
+        {id: 110, tech : <HTMLsvg/>, tooltip: "HTML"},
+        {id: 111,tech : <CSSsvg/>, tooltip: "CSS"},
+        {id: 112,tech : <JSsvg/>, tooltip: "JS"},
+        {id: 113,tech : <NODEsvg/>, tooltip: "NODEjs"},
+        {id: 114,tech : <REACTsvg/>, tooltip: "React"},
+        {id: 115,tech : <Gatsbysvg/>, tooltip: "Gatsby"},
+        {id: 116,tech : <STYLEDCOMPSsvg/>, tooltip: "Styled Components"},
+        {id: 117,tech : <SASSsvg/>, tooltip: "SASS"},
+        {id: 118,tech : <VSCODEsvg/>, tooltip: "VSCODE"},
+        {id: 119,tech : <CONTENTFULsvg/>, tooltip: "Contentful"},
+        {id: 1110,tech : <GITHUBsvg/>, tooltip: "GitHub"},
+        {id: 1111,tech : <NETLIFYsvg/>, tooltip: "Netlify"},
     ];
-    const techIconItems = techIconList.map((item) => <Tooltip title={item.tooltip} TransitionComponent={Zoom} enterDelay={150} placement="bottom" arrow><SVGwrapper>{item.tech}</SVGwrapper></Tooltip>)
+    const techIconItems = techIconList.map((item) => <Tooltip title={item.tooltip} TransitionComponent={Zoom} enterDelay={150} placement="bottom" arrow><SVGwrapper key={item.id}>{item.tech}</SVGwrapper></Tooltip>)
     return (
         <div>
             <ProjectsHeader>
