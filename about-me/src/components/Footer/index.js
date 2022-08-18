@@ -13,6 +13,9 @@ const FooterDescr = styled.div`
     height: 4rem;
     width: 40%;
     box-sizing: border-box;
+    & p{
+        color: white;
+    }
 `
 const FooterLinks = styled.div`
     border: 2px solid red;

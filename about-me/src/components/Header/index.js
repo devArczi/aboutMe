@@ -46,9 +46,12 @@ const HeaderDescription = styled.div`
 const Header = () =>{
     return(
         <HeaderWrapper as={motion.div}
-        initial={{opacity:0, transition: {duration:5.1}}}
+        initial={{opacity:0}}
         animate={{opacity:1}}
-        exit={{opacity:0 , transition: {ease: "ease-all",duration:0.001}}}
+        exit={{opacity:0}}
+        // initial={{width: 0, transition: {duration: 15.1}}}
+        // animate={{width: "100%"}}
+        // exit={{x: window.innerWith, transition: {duration: 15.1}}}
         >
             <ContentHeader>
                 <MyImg>

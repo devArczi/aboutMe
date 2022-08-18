@@ -18,10 +18,11 @@ flex-direction: row;
         color:white;
         padding: 15px;
         margin:0.6%;
-        background: rgba(190,44,208,0.1);
+        /* background: rgba(190,44,208,0.1); */
+        background: transparent;
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(9.4px);
+        backdrop-filter: blur(11.4px);
         -webkit-backdrop-filter: blur(9.4px);
         border: 1px solid rgba(63, 105, 122, 1);
     }
@@ -31,7 +32,8 @@ flex-direction: row;
         transition-duration: .5s;
         z-index: 2;
         & *{
-            color: rgba(190,44,208,0.8589810924369747);
+            /* color: rgba(190,44,208,0.8589810924369747); */
+            color: red;
         }
     }
 
@@ -48,7 +50,7 @@ const Nav = () =>{
         {id: 1, nav : <PostAddOutlinedIcon/>, tooltip: "Post", link:"/projects"},
         {id: 2, nav : <NewspaperIcon/>, tooltip: "News", link:"/TechStack"},
         {id: 3, nav : <AssignmentIndIcon/>, tooltip: "Assignment", link:"/ass"},
-        {id: 4, nav : <GitHubIcon/>, tooltip: "GitHub" ,link:"/GH"},
+        {id: 4, nav : <GitHubIcon/>, tooltip: "GitHub" ,link: { pathname: "https://example.com" }},
         {id: 5, nav : <ContactMailIcon/>, tooltip: "Contact", link:"/CT"},
     ];
 
