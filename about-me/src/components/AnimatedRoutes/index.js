@@ -1,14 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
-// import Header from '../Header';
-// import Projects from '../Projects';
-// import TechStack from '../Tech';
 import { AnimatePresence } from 'framer-motion';
-import Footer from '../Footer';
+
 
 const Header = React.lazy(() => import("../Header"));
 const Projects = React.lazy(() => import("../Projects"));
 const TechStack = React.lazy(() => import("../Tech"));
+const RedirectedPage = React.lazy(() => import("../ExternalPage"))
 
 const AnimatedRoutes = () => {
     const location = useLocation();
@@ -23,6 +21,9 @@ const AnimatedRoutes = () => {
                 </React.Suspense>}/>
                 <Route path='/techstack' element={<React.Suspense fallback={<>...</>}>
                     <TechStack/>
+                </React.Suspense>}/>
+                <Route path='https://github.com/devArczi' element={<React.Suspense fallback={<>...</>}>
+                    <RedirectedPage/>
                 </React.Suspense>}/>
             </Routes>
         </AnimatePresence>

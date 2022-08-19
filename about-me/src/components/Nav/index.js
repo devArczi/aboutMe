@@ -51,7 +51,7 @@ const Nav = () =>{
         {id: 1, nav : <PostAddOutlinedIcon/>, tooltip: "Post", link:"/projects"},
         {id: 2, nav : <NewspaperIcon/>, tooltip: "News", link:"/TechStack"},
         {id: 3, nav : <AssignmentIndIcon/>, tooltip: "Assignment", link:"/ass"},
-        {id: 4, nav : <GitHubIcon/>, tooltip: "GitHub" ,link: { pathname: "https://example.com" }},
+        {id: 4, nav : <GitHubIcon/>, tooltip: "GitHub" ,link: "/https://github.com/devArczi"},
         {id: 5, nav : <ContactMailIcon/>, tooltip: "Contact", link:"/CT"},
     ];
 
