@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import About from '../About';
 
 
 const Header = React.lazy(() => import("../Header"));
@@ -21,6 +22,9 @@ const AnimatedRoutes = () => {
                 </React.Suspense>}/>
                 <Route path='/techstack' element={<React.Suspense fallback={<>...</>}>
                     <TechStack/>
+                </React.Suspense>}/>
+                <Route path='/about-me' element={<React.Suspense fallback={<>...</>}>
+                    <About/>
                 </React.Suspense>}/>
                 <Route path='https://github.com/devArczi' element={<React.Suspense fallback={<>...</>}>
                     <RedirectedPage/>

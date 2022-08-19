@@ -3,20 +3,20 @@ import styled from "styled-components";
 import { motion } from 'framer-motion';
 import Footer from "../Footer";
 
-const HeaderWrapper = styled.div`
+export const HeaderWrapper = styled.div`
     height: 600px;
     border: 2px solid red;
     box-sizing: border-box;
     position: absolute;
     max-width: 56.5%;
 `
-const MyImg = styled.div`
+export const MyImg = styled.div`
     height: 200px;
     flex-basis: 200px;
     border: 2px solid yellow;
     display: inline-block;
 `
-const MyHeader = styled.div`
+export const MyHeader = styled.div`
     height: 200px;
     flex-basis: 700px;
     border: 2px solid green;
@@ -28,13 +28,13 @@ const MyHeader = styled.div`
             color: azure;
         }
 `
-const ContentHeader = styled.div`
+export const ContentHeader = styled.div`
     padding: 100px 0 0 100px;
     width: 100%;
     display: flex;
     box-sizing: border-box;
 `
-const HeaderDescription = styled.div`
+export const HeaderDescription = styled.div`
     height: 300px;
     width: 100%;
     border: 2px solid blue;
@@ -52,9 +52,6 @@ const Header = () =>{
         initial={{opacity:0}}
         animate={{opacity:1}}
         exit={{opacity:0}}
-        // initial={{width: 0, transition: {duration: 15.1}}}
-        // animate={{width: "100%"}}
-        // exit={{x: window.innerWith, transition: {duration: 15.1}}}
         >
             <ContentHeader>
                 <MyImg>

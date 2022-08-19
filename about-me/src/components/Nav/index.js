@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { Tooltip, Zoom } from '@mui/material';
 import styled from "styled-components";
 import HouseRoundedIcon from '@mui/icons-material/HouseRounded';
-import PostAddOutlinedIcon from '@mui/icons-material/PostAddOutlined';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
-import NewspaperIcon from '@mui/icons-material/Newspaper';
+import ConstructionIcon from '@mui/icons-material/Construction';
+import WorkIcon from '@mui/icons-material/Work';
 import { Link } from 'react-router-dom';
 
 const NavList = styled.ul`
@@ -47,15 +47,15 @@ const NavWrapper = styled.div`
 `;
 const Nav = () =>{
     const navIconList = [
-        {id: 0, nav : <HouseRoundedIcon/>, tooltip: "Home" , link:"/"},
-        {id: 1, nav : <PostAddOutlinedIcon/>, tooltip: "Post", link:"/projects"},
-        {id: 2, nav : <NewspaperIcon/>, tooltip: "News", link:"/TechStack"},
-        {id: 3, nav : <AssignmentIndIcon/>, tooltip: "Assignment", link:"/ass"},
-        {id: 4, nav : <GitHubIcon/>, tooltip: "GitHub" ,link: "/https://github.com/devArczi"},
-        {id: 5, nav : <ContactMailIcon/>, tooltip: "Contact", link:"/CT"},
+        {id: 0, nav : <HouseRoundedIcon/>, tooltip: "Home" , link:"/" , target: "_self"},
+        {id: 1, nav : <WorkIcon/>, tooltip: "Projects", link:"/projects", target: "_self"},
+        {id: 2, nav : <ConstructionIcon/>, tooltip: "TechStack", link:"/TechStack", target: "_self"},
+        {id: 3, nav : <AssignmentIndIcon/>, tooltip: "About Me", link:"/about-me", target: "_self"},
+        {id: 4, nav : <GitHubIcon/>, tooltip: "GitHub" ,link: "/https://github.com/devArczi", target: "_blank"},
+        {id: 5, nav : <ContactMailIcon/>, tooltip: "Contact", link:"/CT", target: "_self"},
     ];
 
-    const navIconItems = navIconList.map((item) => <Tooltip title={item.tooltip} TransitionComponent={Zoom} enterDelay={100} placement="bottom" arrow><li key={item.link}><Link to={item.link}>{item.nav}</Link></li></Tooltip>)
+    const navIconItems = navIconList.map((item) => <Tooltip title={item.tooltip} TransitionComponent={Zoom} enterDelay={100} placement="bottom" arrow><li key={item.link}><Link to={item.link} target={item.target}>{item.nav}</Link></li></Tooltip>)
  
 
     console.log(navIconList[1].link)
