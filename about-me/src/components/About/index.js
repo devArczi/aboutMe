@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Footer from '../Footer';
-import {HeaderWrapper , ContentHeader, MyImg, MyHeader, HeaderDescription} from '../Header/index'
+import {HeaderWrapper , ContentHeader, MyHeader, HeaderDescription} from '../Header/index'
 
 
 const About = () => {

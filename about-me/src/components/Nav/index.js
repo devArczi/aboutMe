@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Tooltip, Zoom } from '@mui/material';
 import styled from "styled-components";
 import HouseRoundedIcon from '@mui/icons-material/HouseRounded';
-import ContactMailIcon from '@mui/icons-material/ContactMail';
-import GitHubIcon from '@mui/icons-material/GitHub';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import ConstructionIcon from '@mui/icons-material/Construction';
 import WorkIcon from '@mui/icons-material/Work';
@@ -18,7 +16,6 @@ flex-direction: row;
         color:white;
         padding: 15px;
         margin:0.6%;
-        /* background: rgba(190,44,208,0.1); */
         background: transparent;
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -32,7 +29,6 @@ flex-direction: row;
         transition-duration: .5s;
         z-index: 2;
         & *{
-            /* color: rgba(190,44,208,0.8589810924369747); */
             color: red;
         }
     }
@@ -51,7 +47,6 @@ const Nav = () =>{
         {id: 1, nav : <WorkIcon/>, tooltip: "Projects", link:"/projects", target: "_self"},
         {id: 2, nav : <ConstructionIcon/>, tooltip: "TechStack", link:"/TechStack", target: "_self"},
         {id: 3, nav : <AssignmentIndIcon/>, tooltip: "About Me", link:"/about-me", target: "_self"},
-        {id: 5, nav : <ContactMailIcon/>, tooltip: "Contact", link:"/CT", target: "_self"},
     ];
 
     const navIconItems = navIconList.map((item) => <Tooltip title={item.tooltip} TransitionComponent={Zoom} enterDelay={100} placement="bottom" arrow><li key={item.link}><Link to={item.link} target={item.target}>{item.nav}</Link></li></Tooltip>)

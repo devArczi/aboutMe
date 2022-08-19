@@ -45,9 +45,6 @@ const Projects = () => {
         initial={{opacity:0}}
         animate={{opacity:1}}
         exit={{opacity:0}}
-        // initial={{width: 0, transition: {duration: 15.1}}}
-        // animate={{width: "100%"}}
-        // exit={{x: window.innerWith, transition: {duration: 15.1}}}
         >
             <ProjectsHeader>
                 <h2>My projects</h2>
