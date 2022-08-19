@@ -43,6 +43,7 @@ flex-direction: row;
 const NavWrapper = styled.div`
     background: transparent;
     border: red 2px solid;
+    min-width: 100%;
 `;
 const Nav = () =>{
     const navIconList = [

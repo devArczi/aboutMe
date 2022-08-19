@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-route
 // import Projects from '../Projects';
 // import TechStack from '../Tech';
 import { AnimatePresence } from 'framer-motion';
+import Footer from '../Footer';
 
 const Header = React.lazy(() => import("../Header"));
 const Projects = React.lazy(() => import("../Projects"));

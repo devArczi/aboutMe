@@ -2,11 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 const FooterWrapper = styled.div`
-    margin-top: 50px;
     height: 250px;
-    width: auto;
     display: flex;
     justify-content: space-between;
+    margin-top: 100px;
+    /* position: absolute; */
+    /* top: 800px; */
 `
 const FooterDescr = styled.div`
     border: 2px solid greenyellow;

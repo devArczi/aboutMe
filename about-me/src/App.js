@@ -17,7 +17,7 @@ function App() {
       <AppWrapper>
         <Nav/>
         <AnimatedRoutes/>
-        <Footer/>
+        {/* <Footer/> */}
       </AppWrapper>
     </Router>
   );

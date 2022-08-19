@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from 'framer-motion';
+import Footer from "../Footer";
 
 const HeaderWrapper = styled.div`
     height: 600px;
     border: 2px solid red;
     box-sizing: border-box;
-    /* position: relative; */
+    position: absolute;
+    max-width: 56.5%;
 `
 const MyImg = styled.div`
     height: 200px;
@@ -46,6 +48,7 @@ const HeaderDescription = styled.div`
 const Header = () =>{
     return(
         <HeaderWrapper as={motion.div}
+        transition={{delay:0.5}}
         initial={{opacity:0}}
         animate={{opacity:1}}
         exit={{opacity:0}}
@@ -67,6 +70,7 @@ const Header = () =>{
                 <p>React fan  |  I wanna achieve best basics in front-end coding  |  coffee lover</p>
                 <p>I want become great developer and work with many awesome people !</p>
             </HeaderDescription>
+            <Footer/>
         </HeaderWrapper>
     )
 }
