@@ -26,9 +26,6 @@ const AnimatedRoutes = () => {
                 <Route path='/about-me' element={<React.Suspense fallback={<>...</>}>
                     <About/>
                 </React.Suspense>}/>
-                <Route path='https://github.com/devArczi' element={<React.Suspense fallback={<>...</>}>
-                    <RedirectedPage/>
-                </React.Suspense>}/>
             </Routes>
         </AnimatePresence>
     );

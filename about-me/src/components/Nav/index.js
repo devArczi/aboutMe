@@ -51,14 +51,12 @@ const Nav = () =>{
         {id: 1, nav : <WorkIcon/>, tooltip: "Projects", link:"/projects", target: "_self"},
         {id: 2, nav : <ConstructionIcon/>, tooltip: "TechStack", link:"/TechStack", target: "_self"},
         {id: 3, nav : <AssignmentIndIcon/>, tooltip: "About Me", link:"/about-me", target: "_self"},
-        {id: 4, nav : <GitHubIcon/>, tooltip: "GitHub" ,link: "/https://github.com/devArczi", target: "_blank"},
         {id: 5, nav : <ContactMailIcon/>, tooltip: "Contact", link:"/CT", target: "_self"},
     ];
 
     const navIconItems = navIconList.map((item) => <Tooltip title={item.tooltip} TransitionComponent={Zoom} enterDelay={100} placement="bottom" arrow><li key={item.link}><Link to={item.link} target={item.target}>{item.nav}</Link></li></Tooltip>)
  
 
-    console.log(navIconList[1].link)
     return(
         <NavWrapper>
             <NavList>
