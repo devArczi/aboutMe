@@ -7,7 +7,6 @@ import About from '../About';
 const Header = React.lazy(() => import("../Header"));
 const Projects = React.lazy(() => import("../Projects"));
 const TechStack = React.lazy(() => import("../Tech"));
-const RedirectedPage = React.lazy(() => import("../ExternalPage"))
 
 const AnimatedRoutes = () => {
     const location = useLocation();
