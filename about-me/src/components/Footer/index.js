@@ -26,7 +26,7 @@ const FooterLine = styled.div`
 `
 
 const FooterDescr = styled.div`
-    border: 2px solid greenyellow;
+    /* border: 2px solid greenyellow; */
     height: 4rem;
     width: 40%;
     box-sizing: border-box;
@@ -35,7 +35,7 @@ const FooterDescr = styled.div`
     }
 `
 const FooterLinks = styled.div`
-    border: 2px solid red;
+    /* border: 2px solid red; */
     height: 4rem;
     width: 40%;
     display: flex;

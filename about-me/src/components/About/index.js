@@ -14,14 +14,29 @@ const About = () => {
         >
             <ContentHeader>
                 <MyHeader>
-                    <p>Hello :) I'm Artur & </p>
-                    <p>I'm interested in front-end development and future techs, like web3.</p>
+                    <p>A few words about me :</p>
+                    {/* <p>I'm interested in front-end development and future techs, like web3.</p> */}
                 </MyHeader>
             </ContentHeader>
             <HeaderDescription>
-                <p>Self-taught Front-End Social Developer</p>
-                <p>React fan  |  I wanna achieve best basics in front-end coding  |  coffee lover</p>
-                <p>I want become great developer and work with many awesome people !</p>
+                <p>const name = Artur</p>
+                <p>const age = 27</p>
+                <p>const favouriteTechnologies = React </p>
+                <p>const learnPriority = typescript & firebase</p>
+                <p>const thingsAfterWork = [walking, driving car with no sense, watch anime, earn more money]</p>
+                <p>const hobbies = [marketing, cryptocurrency, investing, diving, table tenis, gaming, learning new technologies]</p>
+                <p>const character = 
+                    <pre><ul>
+                        <li>results-oriented</li>
+                        <li>highly organized</li>
+                        <li>people-person</li>
+                        <li>Positive</li>
+                        <li>Flexible</li>
+                        <li>Cooperative</li>
+                        <li>Helpful</li>
+                        <li>Patient</li>
+                        </ul></pre>
+                </p>
             </HeaderDescription>
             <Footer/>
         </HeaderWrapper>

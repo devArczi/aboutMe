@@ -5,7 +5,7 @@ import Footer from "../Footer";
 
 export const HeaderWrapper = styled.div`
     height: 600px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     box-sizing: border-box;
     position: absolute;
     max-width: 56.5%;
@@ -13,13 +13,13 @@ export const HeaderWrapper = styled.div`
 export const MyImg = styled.div`
     height: 200px;
     flex-basis: 200px;
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
     display: inline-block;
 `
 export const MyHeader = styled.div`
-    height: 200px;
+    height: 100%;
     flex-basis: 700px;
-    border: 2px solid green;
+    /* border: 2px solid green; */
     display: inline-block;
     margin-left: 30px;
         & p{
@@ -35,9 +35,9 @@ export const ContentHeader = styled.div`
     box-sizing: border-box;
 `
 export const HeaderDescription = styled.div`
-    height: 300px;
+    height: 100%;
     width: 100%;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     & p{
         padding: 0 40px;
         font-family: 'Mouse Memoirs', sans-serif;
