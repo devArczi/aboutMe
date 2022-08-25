@@ -15,7 +15,7 @@ flex-direction: row;
     & li {
         color:white;
         padding: 15px;
-        margin:0.6%;
+        margin:0.8%;
         background: transparent;
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -37,8 +37,9 @@ flex-direction: row;
 
 
 const NavWrapper = styled.div`
+    display: flex;
+    justify-content: flex-end;
     background: transparent;
-    /* border: red 2px solid; */
     min-width: 100%;
 `;
 const Nav = () =>{

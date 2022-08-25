@@ -6,6 +6,7 @@ import Footer from '../Footer';
 const ProjectsWrapper = styled.div`
     min-height: 300px;
     position: absolute;
+    top: 100px;
     max-width: 56.5%;
     min-width: 56.5%;
 `

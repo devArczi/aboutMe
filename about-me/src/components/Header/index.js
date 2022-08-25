@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from 'framer-motion';
 import Footer from "../Footer";
+import Img from "../../assets/myImg.jpeg"
 
 export const HeaderWrapper = styled.div`
     height: 600px;
@@ -15,6 +16,10 @@ export const MyImg = styled.div`
     flex-basis: 200px;
     /* border: 2px solid yellow; */
     display: inline-block;
+        & img{
+            height: 270px;
+            border-radius: 60%;
+        }
 `
 export const MyHeader = styled.div`
     height: 100%;
@@ -35,7 +40,8 @@ export const ContentHeader = styled.div`
     box-sizing: border-box;
 `
 export const HeaderDescription = styled.div`
-    height: 100%;
+    /* height: 90%; */
+    margin-bottom: 200px;
     width: 100%;
     /* border: 2px solid blue; */
     & p{
@@ -55,7 +61,7 @@ const Header = () =>{
         >
             <ContentHeader>
                 <MyImg>
-
+                    <img src={Img}/>
                 </MyImg>
                 <MyHeader>
                     <p>Hello :) I'm Artur & </p>

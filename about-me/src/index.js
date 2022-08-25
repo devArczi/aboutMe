@@ -11,8 +11,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     background-image: url("${background}");
     background-repeat: no-repeat;
-    background-size: cover;
     min-height: 100%;
+    background-attachment: fixed;
     margin: 0 10%;
   }
 `
