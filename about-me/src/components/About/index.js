@@ -1,24 +1,23 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Footer from '../Footer';
-import {HeaderWrapper , ContentHeader, MyHeader, HeaderDescription} from '../Header/index'
+import {AboutMe__SectionWrapper , AboutMe__HeaderWrapper, AboutMe__Header, AboutMe__Description} from '../../styles'
 
 
 const About = () => {
     return (
-        <HeaderWrapper as={motion.div}
+        <AboutMe__SectionWrapper as={motion.div}
         transition={{delay:0.5}}
         initial={{opacity:0}}
         animate={{opacity:1}}
         exit={{opacity:0}}
         >
-            <ContentHeader>
-                <MyHeader>
-                    <p>A few words about me :</p>
-                    {/* <p>I'm interested in front-end development and future techs, like web3.</p> */}
-                </MyHeader>
-            </ContentHeader>
-            <HeaderDescription>
+            <AboutMe__HeaderWrapper>
+                <AboutMe__Header>
+                    <h2>A few words about me :</h2>
+                </AboutMe__Header>
+            </AboutMe__HeaderWrapper>
+            <AboutMe__Description>
                 <p>const name = Artur {"\n"}
                 const age = 27{"\n"}
                 const favouriteTechnologies = React{"\n"}
@@ -37,9 +36,9 @@ const About = () => {
                         <li>Patient</li>
                         </ul></pre>
                 </p>
-            </HeaderDescription>
+            </AboutMe__Description>
             <Footer/>
-        </HeaderWrapper>
+        </AboutMe__SectionWrapper>
     );
 }
 

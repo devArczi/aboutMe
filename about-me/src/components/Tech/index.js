@@ -2,36 +2,11 @@ import { Tooltip, Zoom } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
 import { CONTENTFULsvg, CSSsvg, Gatsbysvg, GITHUBsvg, HTMLsvg, JSsvg, NETLIFYsvg, NODEsvg, REACTsvg, SASSsvg, STYLEDCOMPSsvg, VSCODEsvg } from '../../assets/SVG';
-import { ProjectsHeader } from '../Projects';
 import { motion } from 'framer-motion';
 import Footer from '../Footer';
+import { TechSection, TechHeader, SVGwrapper, TechWrapper } from "../../styles";
 
-const TechSection = styled.div`
-    min-height: 300px;
-    position: absolute;
-    top: 100px;
-    max-width: 56.5%;
-`
 
-const SVGwrapper = styled.div`
-    height: 100px;
-    width: 100px;
-    padding: 55px 55px 5px;
-    flex-basis: 2%;
-    justify-content: center;
-`
-const TechWrapper = styled.div`
-color: white;
-    fill: white;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    & div:hover{
-        transform: scale(1.1);
-        transition-duration: .5s;
-    }
-`
 const TechStack = () => {
     const techIconList = [
         {id: 110, tech : <HTMLsvg/>, tooltip: "HTML"},
@@ -54,10 +29,9 @@ const TechStack = () => {
         initial={{opacity:0}}
         animate={{opacity:1}}
         exit={{opacity:0}}>
-            <ProjectsHeader>
+            <TechHeader>
                 <h2>My Tech & Tools</h2>
-                <div></div>
-            </ProjectsHeader>
+            </TechHeader>
             <TechWrapper>
                 {techIconItems}
             </TechWrapper>

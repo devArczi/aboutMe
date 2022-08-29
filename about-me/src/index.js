@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createGlobalStyle } from 'styled-components';
 import background from "./assets/bg-blue1.jpg"
+import {device} from "../src/styles/index"
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
@@ -16,6 +17,9 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100%;
     background-attachment: fixed;
     margin: 0 10%;
+    @media ${device.desktopL} {
+      margin: 0 250px;
+    }
   }
 `
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -6,48 +6,9 @@ import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import ConstructionIcon from '@mui/icons-material/Construction';
 import WorkIcon from '@mui/icons-material/Work';
 import { Link } from 'react-router-dom';
-
-const NavList = styled.ul`
-position: absolute;
-left: 250px;
-top: 13%;
-list-style-type: none;
-display: flex;
-justify-content: flex-end;
-flex-direction: column;
-    & li {
-        color: blue;
-        padding: 15px;
-        margin:0.8%;
-        background: transparent;
-        border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(11.4px);
-        -webkit-backdrop-filter: blur(9.4px);
-        border: 1px solid rgba(63, 105, 122, 1);
-        & svg{
-            fill: aliceblue;
-        }
-    }
-    & li:hover{
-        cursor:pointer;
-        transform: scale(1.5);
-        transition-duration: .5s;
-        z-index: 2;
-        & *{
-            color: red;
-        }
-    }
-
-`;
+import { NavWrapper, NavList } from "../../styles";
 
 
-const NavWrapper = styled.div`
-    display: flex;
-    justify-content: flex-end;
-    background: transparent;
-    min-width: 100%;
-`;
 const Nav = () =>{
     const navIconList = [
         {id: 0, nav : <HouseRoundedIcon/>, tooltip: "Home" , link:"/" , target: "_self"},

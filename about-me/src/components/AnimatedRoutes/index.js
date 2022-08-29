@@ -4,7 +4,7 @@ import { AnimatePresence } from 'framer-motion';
 import About from '../About';
 
 
-const Header = React.lazy(() => import("../Header"));
+const Home = React.lazy(() => import("../Home"));
 const Projects = React.lazy(() => import("../Projects"));
 const TechStack = React.lazy(() => import("../Tech"));
 
@@ -14,7 +14,7 @@ const AnimatedRoutes = () => {
         <AnimatePresence>
             <Routes location={location} key={location.pathname}>
                 <Route path='/' element={<React.Suspense fallback={<>...</>}>
-                    <Header/>
+                    <Home/>
                 </React.Suspense>}/>
                 <Route path='/projects' element={<React.Suspense fallback={<>...</>}>
                     <Projects/>
