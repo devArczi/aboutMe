@@ -6,15 +6,14 @@ import Img from "../../assets/myImg.jpeg"
 
 export const HeaderWrapper = styled.div`
     height: 600px;
-    /* border: 2px solid red; */
     box-sizing: border-box;
     position: absolute;
+    top: 30px;
     max-width: 56.5%;
 `
 export const MyImg = styled.div`
     height: 200px;
     flex-basis: 200px;
-    /* border: 2px solid yellow; */
     display: inline-block;
         & img{
             height: 270px;
@@ -24,7 +23,6 @@ export const MyImg = styled.div`
 export const MyHeader = styled.div`
     height: 100%;
     flex-basis: 700px;
-    /* border: 2px solid green; */
     display: inline-block;
     margin-left: 30px;
         & p{
@@ -40,10 +38,9 @@ export const ContentHeader = styled.div`
     box-sizing: border-box;
 `
 export const HeaderDescription = styled.div`
-    /* height: 90%; */
     margin-bottom: 200px;
     width: 100%;
-    /* border: 2px solid blue; */
+    white-space: pre-line;
     & p{
         padding: 0 40px;
         font-family: 'Mouse Memoirs', sans-serif;

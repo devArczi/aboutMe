@@ -8,12 +8,15 @@ import WorkIcon from '@mui/icons-material/Work';
 import { Link } from 'react-router-dom';
 
 const NavList = styled.ul`
+position: absolute;
+left: 250px;
+top: 13%;
 list-style-type: none;
 display: flex;
 justify-content: flex-end;
-flex-direction: row;
+flex-direction: column;
     & li {
-        color:white;
+        color: blue;
         padding: 15px;
         margin:0.8%;
         background: transparent;
@@ -22,6 +25,9 @@ flex-direction: row;
         backdrop-filter: blur(11.4px);
         -webkit-backdrop-filter: blur(9.4px);
         border: 1px solid rgba(63, 105, 122, 1);
+        & svg{
+            fill: aliceblue;
+        }
     }
     & li:hover{
         cursor:pointer;

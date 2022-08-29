@@ -19,13 +19,13 @@ const About = () => {
                 </MyHeader>
             </ContentHeader>
             <HeaderDescription>
-                <p>const name = Artur</p>
-                <p>const age = 27</p>
-                <p>const favouriteTechnologies = React </p>
-                <p>const learnPriority = typescript & firebase</p>
-                <p>const thingsAfterWork = [walking, driving car with no sense, watch anime, earn more money]</p>
-                <p>const hobbies = [marketing, cryptocurrency, investing, diving, table tenis, gaming, learning new technologies]</p>
-                <p>const character = 
+                <p>const name = Artur {"\n"}
+                const age = 27{"\n"}
+                const favouriteTechnologies = React{"\n"}
+                const learnPriority = typescript & firebase{"\n"}
+                const thingsAfterWork = [walking, driving car with no sense, watch anime, earn more money]{"\n"}
+                const hobbies = [marketing, cryptocurrency, investing, diving, table tenis, gaming, learning new technologies]{"\n"}
+                const character = 
                     <pre><ul>
                         <li>results-oriented</li>
                         <li>highly organized</li>

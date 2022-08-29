@@ -4,13 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createGlobalStyle } from 'styled-components';
-import background from "./assets/background.png"
+import background from "./assets/bg-blue1.jpg"
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
   body {
     background-image: url("${background}");
     background-repeat: no-repeat;
+    background-position-y: -2px;
+    background-size: cover;
     min-height: 100%;
     background-attachment: fixed;
     margin: 0 10%;

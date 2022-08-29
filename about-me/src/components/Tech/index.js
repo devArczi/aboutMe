@@ -9,6 +9,7 @@ import Footer from '../Footer';
 const TechSection = styled.div`
     min-height: 300px;
     position: absolute;
+    top: 100px;
     max-width: 56.5%;
 `
 
@@ -20,6 +21,8 @@ const SVGwrapper = styled.div`
     justify-content: center;
 `
 const TechWrapper = styled.div`
+color: white;
+    fill: white;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -37,7 +40,7 @@ const TechStack = () => {
         {id: 113,tech : <NODEsvg/>, tooltip: "NODEjs"},
         {id: 114,tech : <REACTsvg/>, tooltip: "React"},
         {id: 115,tech : <Gatsbysvg/>, tooltip: "Gatsby"},
-        {id: 116,tech : <STYLEDCOMPSsvg/>, tooltip: "Styled Components"},
+        {id: 116,tech : <STYLEDCOMPSsvg fill="white"/>, tooltip: "Styled Components"},
         {id: 117,tech : <SASSsvg/>, tooltip: "SASS"},
         {id: 118,tech : <VSCODEsvg/>, tooltip: "VSCODE"},
         {id: 119,tech : <CONTENTFULsvg/>, tooltip: "Contentful"},
