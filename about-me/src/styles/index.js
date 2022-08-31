@@ -25,17 +25,19 @@ export const AppWrapper = styled.div`
 
 margin: 0 200px;
 height: 100vh;
-
+@media ${device.tablet} {
+        margin: 0px 100px;
+}
 @media ${device.laptop} {
         margin: 0px 150px;
-    }
+}
 @media ${device.laptopL} {
     margin: 0 200px;
 }
   
 @media ${device.desktopL} {
     margin: 0 200px;
-  }
+}
 `
 // --------------- NAVIGATION --------------- //
 
@@ -45,6 +47,11 @@ left: 20%;
 top: 13%;
 display: flex;
 background: transparent;
+
+@media ${device.tablet} {
+    left: 8%;
+    top: 13%;
+}
 @media ${device.laptop} {
     left: 8%;
     top: 13%;
@@ -77,6 +84,12 @@ flex-direction: column;
         -webkit-backdrop-filter: blur(9.4px);
         border: 1px solid rgba(63, 105, 122, 1);
 
+        @media ${device.tablet} {
+            transform: scale(1);
+            margin: 10% 0;
+            padding: 15px;
+        }
+
         @media ${device.laptop} {
             margin: 10% 0;
             padding: 15px;
@@ -104,7 +117,9 @@ flex-direction: column;
         transform: scale(2.5);
         transition-duration: .5s;
         z-index: 2;
-
+        @media ${device.tablet} {
+            transform: scale(1.3);
+        }
         @media ${device.laptop} {
             transform: scale(1.3);
         }
@@ -142,7 +157,10 @@ export const HomeHeader = styled.div`
     width: 100%;
     display: flex;
     box-sizing: border-box;
-    
+    @media ${device.tablet} {
+        flex-wrap: wrap;
+        align-items: baseline;
+    }
     @media ${device.laptop} {
         flex-wrap: wrap;
         align-items: baseline;
@@ -306,6 +324,11 @@ export const AboutMe__SectionWrapper = styled.div`
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, .12);  
 
+    @media ${device.tablet} {
+        font-size: 1rem;  
+        height: 90%;
+        width: 50%;
+    }
     @media ${device.laptop} {
         font-size: 1rem;  
         height: 90%;
@@ -373,6 +396,11 @@ export const Footer__Wrapper = styled.div`
     justify-content: center;
     margin-top: 30px;
 
+    @media ${device.tablet} {
+        font-size: 1rem;
+        margin-left: -30px;
+        justify-content: space-between;
+    }
     @media ${device.laptop} {
         font-size: 1rem;
         margin-left: -30px;
