@@ -19,6 +19,16 @@ const size = {
     desktop: `(min-width: ${size.desktop})`,
     desktopL: `(min-width: ${size.desktop})`
   };
+
+
+export const AppWrapper = styled.div`
+
+margin: 0 200px;
+height: 100vh;
+@media ${device.laptop} {
+        margin: 0px 150px;
+    }
+`
 // --------------- NAVIGATION --------------- //
 
 export const NavWrapper = styled.div`
@@ -27,7 +37,10 @@ left: 20%;
 top: 13%;
 display: flex;
 background: transparent;
-
+@media ${device.laptop} {
+    left: 8%;
+    top: 13%;
+}
 @media ${device.laptopL} {
     left: 13%;
     top: 13%;
@@ -56,6 +69,11 @@ flex-direction: column;
         -webkit-backdrop-filter: blur(9.4px);
         border: 1px solid rgba(63, 105, 122, 1);
 
+        @media ${device.laptop} {
+            margin: 10% 0;
+            padding: 15px;
+        }
+
         @media ${device.laptopL} {
             transform: scale(1.2);
             margin: 20% 0;
@@ -79,17 +97,16 @@ flex-direction: column;
         transition-duration: .5s;
         z-index: 2;
 
-        @media ${device.laptopL} {
-            cursor:pointer;
-            transform: scale(1.5);
-            transition-duration: .5s;
-            z-index: 2;
+        @media ${device.laptop} {
+            transform: scale(1.3);
         }
+
+        @media ${device.laptopL} {
+            transform: scale(1.5);
+        }
+
         @media ${device.desktopL} {
-            cursor:pointer;
             transform: scale(2.5);
-            transition-duration: .5s;
-            z-index: 2;
         }
         & *{
             color: red;
@@ -110,12 +127,26 @@ export const HomeWrapper = styled.div`
     @media ${device.desktopL} {
         max-width: 100%;
     }
+
 `
 export const HomeHeader = styled.div`
     padding: 100px 0 0 100px;
     width: 100%;
     display: flex;
     box-sizing: border-box;
+    
+    @media ${device.laptop} {
+        flex-wrap: wrap;
+        align-items: baseline;
+    }
+    @media ${device.laptopL} {
+        flex-wrap: nowrap;
+        align-items: normal;
+    }
+    @media ${device.desktopL} {
+        flex-wrap: nowrap;
+        align-items: center;
+    }
 `
 export const MyImg = styled.div`
     height: 200px;
@@ -139,7 +170,8 @@ export const MyImg = styled.div`
 `
 export const MainHeader = styled.div`
     height: 100%;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     margin-left: 30px;
     white-space: break-spaces;
         & p{
@@ -271,12 +303,22 @@ export const AboutMe__SectionWrapper = styled.div`
     max-width: 66.5%;
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, .12);  
+
+    @media ${device.laptop} {
+        font-size: 1rem;  
+        height: 90%;
+        width: 50%;
+    }
 `
 export const AboutMe__HeaderWrapper = styled.div`
     padding: 100px 0 0 100px;
     width: 100%;
     display: flex;
     box-sizing: border-box;
+
+    @media ${device.laptop} {
+        padding: 100px 0 0 40px;
+    }
 `
 export const AboutMe__Header = styled.div`
     height: 100%;
@@ -289,7 +331,7 @@ export const AboutMe__Header = styled.div`
 
             @media ${device.desktopL} {
             font-size: 3rem;  
-        }
+            }
         }
 `
 export const AboutMe__Description = styled.div`
@@ -320,6 +362,11 @@ export const Footer__Wrapper = styled.div`
     justify-content: center;
     margin-top: 30px;
 
+    @media ${device.laptop} {
+        font-size: 1rem;
+        margin-left: -30px;
+        justify-content: space-between;
+    }
     @media ${device.laptopL} {
         font-size: 1.3rem;
         margin-left: -30px;
@@ -335,13 +382,6 @@ export const Footer__Wrapper = styled.div`
 
 
 `
-// export const FooterLine = styled.div`
-//         margin-top: 30px;
-//         height: 0.25rem;
-//         background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-//         animation: ${rainbow} 15s ease infinite;
-//         background-size: 1800% 1800%;
-// `
 
 export const Footer__Description = styled.div`
     height: 4rem;
