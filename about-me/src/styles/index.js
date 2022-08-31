@@ -25,9 +25,17 @@ export const AppWrapper = styled.div`
 
 margin: 0 200px;
 height: 100vh;
+
 @media ${device.laptop} {
         margin: 0px 150px;
     }
+@media ${device.laptopL} {
+    margin: 0 200px;
+}
+  
+@media ${device.desktopL} {
+    margin: 0 200px;
+  }
 `
 // --------------- NAVIGATION --------------- //
 
@@ -233,12 +241,6 @@ export const ProjectsHeader = styled.div`
     @media ${device.desktopL} {
             margin: 55px 0;
         }
-    /* & div{
-        height: 0.25rem;
-        background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-        animation: ${rainbow} 10s ease infinite;
-        background-size: 1800% 1800%;
-    } */
 `
 export const ProjectsContent = styled.div`
     height: 25vh;
@@ -308,6 +310,15 @@ export const AboutMe__SectionWrapper = styled.div`
         font-size: 1rem;  
         height: 90%;
         width: 50%;
+    }
+    @media ${device.laptopL} {
+        font-size: 1rem;  
+        height: 90%;
+    }
+    @media ${device.desktopL} {
+        font-size: 1rem;  
+        height: 70%;
+        width: 100%;
     }
 `
 export const AboutMe__HeaderWrapper = styled.div`
