@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Footer from '../Footer';
-import {AboutMe__SectionWrapper , AboutMe__HeaderWrapper, AboutMe__Header, AboutMe__Description} from '../../styles'
+import {AboutMe__SectionWrapper , AboutMe__HeaderWrapper, AboutMe__Header, AboutMe__Description,AboutME__FooterWrapper} from '../../styles'
 
 
 const About = () => {
@@ -37,7 +37,10 @@ const About = () => {
                         </ul></pre>
                 </p>
             </AboutMe__Description>
-            <Footer/>
+            <AboutME__FooterWrapper>
+               <Footer/> 
+            </AboutME__FooterWrapper>
+            
         </AboutMe__SectionWrapper>
     );
 }

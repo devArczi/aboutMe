@@ -25,6 +25,9 @@ export const AppWrapper = styled.div`
 
 margin: 0 200px;
 height: 100vh;
+@media ${device.mobileL} {
+    margin: 0 -60px;
+}
 @media ${device.tablet} {
         margin: 0px 100px;
 }
@@ -47,7 +50,10 @@ left: 20%;
 top: 13%;
 display: flex;
 background: transparent;
-
+@media ${device.mobileL} {
+    left: 18%;
+    top: 0;
+}
 @media ${device.tablet} {
     left: 8%;
     top: 13%;
@@ -73,6 +79,9 @@ list-style-type: none;
 display: flex;
 justify-content: flex-end;
 flex-direction: column;
+    @media ${device.mobileL} {
+        flex-direction: row;
+    }
     & li {
         color: blue;
         padding: 15px;
@@ -84,6 +93,10 @@ flex-direction: column;
         -webkit-backdrop-filter: blur(9.4px);
         border: 1px solid rgba(63, 105, 122, 1);
 
+        @media ${device.mobileL} {
+            transform: scale(1);
+            padding: 15px;
+        }
         @media ${device.tablet} {
             transform: scale(1);
             margin: 10% 0;
@@ -117,6 +130,9 @@ flex-direction: column;
         transform: scale(2.5);
         transition-duration: .5s;
         z-index: 2;
+        @media ${device.mobileL} {
+            transform: scale(1.3);
+        }
         @media ${device.tablet} {
             transform: scale(1.3);
         }
@@ -146,7 +162,9 @@ export const HomeWrapper = styled.div`
     position: absolute;
     top: 30px;
     max-width: 56.5%;
-
+    @media ${device.mobileL} {
+        margin-top: 50px;
+    }
     @media ${device.desktopL} {
         max-width: 100%;
     }
@@ -157,6 +175,11 @@ export const HomeHeader = styled.div`
     width: 100%;
     display: flex;
     box-sizing: border-box;
+
+    @media ${device.mobileL} {
+        flex-wrap: wrap;
+        align-items: baseline;
+    }
     @media ${device.tablet} {
         flex-wrap: wrap;
         align-items: baseline;
@@ -205,6 +228,10 @@ export const MainHeader = styled.div`
             font-size: 2rem;
             color: azure;
 
+            @media ${device.mobileL} {
+                font-size: 1.3rem; 
+                width: 180px;
+            }
             @media ${device.laptopL} {
                 padding: 15px ;
             }
@@ -217,6 +244,10 @@ export const HomeDescription = styled.div`
     margin-bottom: 200px;
     width: 100%;
     white-space: pre-line;
+
+    @media ${device.mobileL} {
+        margin: 0 100px 200px; 
+    }
     & p{
         padding: 0 40px;
         font-family: 'Mouse Memoirs', sans-serif;
@@ -240,7 +271,7 @@ export const ProjectsWrapper = styled.div`
     top: 100px;
     max-width: 56.5%;
     min-width: 56.5%;
-    
+
 `
 export const rainbow = keyframes`
     0%{background-position:0% 82%}
@@ -256,6 +287,9 @@ export const ProjectsHeader = styled.div`
             font-size: 3rem;  
         }
     }
+    @media ${device.mobileL} {
+            margin-left: 100px;
+        }
     @media ${device.desktopL} {
             margin: 55px 0;
         }
@@ -265,6 +299,11 @@ export const ProjectsContent = styled.div`
     background-color: rgba(255,255,255,0.1);
     text-align: center;
     box-sizing: border-box;
+
+    @media ${device.mobileL} {
+            margin-left: 100px;
+            width: 100%;
+        }
     & p {
         color: white;
         padding: 15%;
@@ -295,6 +334,11 @@ export const TechWrapper = styled.div`
     justify-content: space-between;
     flex-wrap: wrap;
     box-sizing: border-box;
+
+    @media ${device.mobileL} {
+            margin-left: 100px;
+            width: 100%;
+        }
     & div:hover{
         transform: scale(1.1);
         transition-duration: .5s;
@@ -308,6 +352,10 @@ export const TechHeader = styled.div`
             font-size: 3rem;  
         }
     }
+    @media ${device.mobileL} {
+            margin-left: 100px;
+            width: 100%;
+        }
     @media ${device.desktopL} {
             margin: 55px 0;
         }
@@ -323,7 +371,13 @@ export const AboutMe__SectionWrapper = styled.div`
     max-width: 66.5%;
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, .12);  
-
+    
+    @media ${device.mobileL} {
+        margin-top: 100px;
+        margin-left: 100px;
+        font-size: 1rem;  
+        height: 70%;
+    }
     @media ${device.tablet} {
         font-size: 1rem;  
         height: 90%;
@@ -344,12 +398,17 @@ export const AboutMe__SectionWrapper = styled.div`
         width: 100%;
     }
 `
+
 export const AboutMe__HeaderWrapper = styled.div`
     padding: 100px 0 0 100px;
     width: 100%;
     display: flex;
     box-sizing: border-box;
-
+    
+    @media ${device.mobileL} {
+            width: 100%;
+            padding: 0;
+        }
     @media ${device.laptop} {
         padding: 100px 0 0 40px;
     }
@@ -358,6 +417,11 @@ export const AboutMe__Header = styled.div`
     height: 100%;
     flex-basis: 700px;
     display: inline-block;
+
+    @media ${device.mobileL} {
+            margin-left: 20px;
+            width: 100%;
+        }
         & h2{
             font-family: 'Mouse Memoirs', sans-serif;
             font-size: 2rem;
@@ -377,7 +441,9 @@ export const AboutMe__Description = styled.div`
         font-family: 'Mouse Memoirs', sans-serif;
         font-size: 1rem;
         color: azure;
-
+        @media ${device.mobileL} {
+            font-size: 0.8rem;  
+        }
         @media ${device.desktopL} {
             font-size: 1.3rem;  
         }
@@ -386,6 +452,10 @@ export const AboutMe__Description = styled.div`
             font-size: 2rem;  
         }
     }
+`
+export const AboutME__FooterWrapper = styled.div`
+    position: absolute;
+    left: -160px;
 `
 
 // --------------- FOOTER --------------- //
@@ -396,6 +466,16 @@ export const Footer__Wrapper = styled.div`
     justify-content: center;
     margin-top: 30px;
 
+    @media ${device.mobileL} {
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1rem;
+        width: 100%;
+        margin-left: 120px;
+        justify-content: space-between;
+    }
     @media ${device.tablet} {
         font-size: 1rem;
         margin-left: -30px;
@@ -435,12 +515,19 @@ export const Footer__Links = styled.div`
     width: 40%;
     display: flex;
     justify-content: flex-end;
+
+    @media ${device.mobileL}{
+        width: 100%;
+        justify-content: center;
+    }
     & a{
         color: white;
 
         & svg{
             font-size: 40px;
-
+            @media ${device.mobileL}{
+                font-size: 40px;
+            }
             @media ${device.desktopL} {
                 font-size: 80px;
             }
