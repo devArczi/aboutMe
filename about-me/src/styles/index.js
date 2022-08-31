@@ -28,10 +28,17 @@ top: 13%;
 display: flex;
 background: transparent;
 
+@media ${device.laptopL} {
+    left: 13%;
+    top: 13%;
+}
+  
 @media ${device.desktopL} {
     left: 9%;
     top: 5%;
   }
+
+
 `
 export const NavList = styled.ul`
 list-style-type: none;
@@ -48,20 +55,42 @@ flex-direction: column;
         backdrop-filter: blur(11.4px);
         -webkit-backdrop-filter: blur(9.4px);
         border: 1px solid rgba(63, 105, 122, 1);
+
+        @media ${device.laptopL} {
+            transform: scale(1.2);
+            margin: 20% 0;
+            padding: 15px;
+        }
+
         @media ${device.desktopL} {
             transform: scale(1.7);
             margin: 60% 0;
             padding: 25px;
         }
+
+
         & svg{
             fill: aliceblue;
         }
     }
-    & li:hover, li:active{
+    & li:hover{
         cursor:pointer;
         transform: scale(2.5);
         transition-duration: .5s;
         z-index: 2;
+
+        @media ${device.laptopL} {
+            cursor:pointer;
+            transform: scale(1.5);
+            transition-duration: .5s;
+            z-index: 2;
+        }
+        @media ${device.desktopL} {
+            cursor:pointer;
+            transform: scale(2.5);
+            transition-duration: .5s;
+            z-index: 2;
+        }
         & *{
             color: red;
         }
@@ -96,6 +125,9 @@ export const MyImg = styled.div`
             height: 270px;
             border-radius: 60%;
 
+            @media ${device.laptopL} {
+                height: 350px;
+            }
             @media ${device.desktopL} {
                 height: 700px;
             }
@@ -107,14 +139,17 @@ export const MyImg = styled.div`
 `
 export const MainHeader = styled.div`
     height: 100%;
-    flex-basis: 700px;
     display: inline-block;
     margin-left: 30px;
+    white-space: break-spaces;
         & p{
             font-family: 'Mouse Memoirs', sans-serif;
             font-size: 2rem;
             color: azure;
 
+            @media ${device.laptopL} {
+                padding: 15px ;
+            }
             @media ${device.desktopL} {
                 font-size: 4rem;  
             }
@@ -130,6 +165,9 @@ export const HomeDescription = styled.div`
         font-size: 1rem;
         color: azure;
 
+        @media ${device.laptopL} {
+            font-size: 1.5rem;  
+        }
         @media ${device.desktopL} {
             font-size: 3rem;  
         }
@@ -265,6 +303,10 @@ export const AboutMe__Description = styled.div`
         color: azure;
 
         @media ${device.desktopL} {
+            font-size: 1.3rem;  
+        }
+
+        @media ${device.desktopL} {
             font-size: 2rem;  
         }
     }
@@ -275,16 +317,23 @@ export const AboutMe__Description = styled.div`
 export const Footer__Wrapper = styled.div`
     height: 250px;
     display: flex;
-    /* justify-content: space-between; */
     justify-content: center;
     margin-top: 30px;
 
+    @media ${device.laptopL} {
+        font-size: 1.3rem;
+        margin-left: -30px;
+        justify-content: space-between;
+    }
+    
     @media ${device.desktopL} {
         width: 1700px;
         font-size: 2rem;
         margin-left: -30px;
         justify-content: space-between;
     }
+
+
 `
 // export const FooterLine = styled.div`
 //         margin-top: 30px;

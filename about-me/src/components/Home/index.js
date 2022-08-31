@@ -19,7 +19,7 @@ const Home = () =>{
                 </MyImg>
                 <MainHeader>
                     <p>Hello :) I'm Artur</p>
-                    <p>I'm interested in front-end development and future techs, like web3.</p>
+                    <p>I'm interested in{"\n"}front-end development{"\n"}and future techs,{"\n"}like web3.</p>
                 </MainHeader>
             </HomeHeader>
             <HomeDescription>
