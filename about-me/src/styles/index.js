@@ -79,9 +79,23 @@ list-style-type: none;
 display: flex;
 justify-content: flex-end;
 flex-direction: column;
-    @media ${device.mobileL} {
-        flex-direction: row;
-    }
+        @media ${device.mobileL} {
+            flex-direction: row;
+        }
+        @media ${device.tablet} {
+            flex-direction: column;
+        }
+
+        @media ${device.laptop} {
+            flex-direction: column;
+        }
+
+        @media ${device.laptopL} {
+            flex-direction: column;
+        }
+        @media ${device.desktopL} {
+            flex-direction: column;
+        }
     & li {
         color: blue;
         padding: 15px;
@@ -162,11 +176,13 @@ export const HomeWrapper = styled.div`
     position: absolute;
     top: 30px;
     max-width: 56.5%;
+    
     @media ${device.mobileL} {
         margin-top: 50px;
     }
     @media ${device.desktopL} {
         max-width: 100%;
+        margin-top: 0;
     }
 
 `
@@ -194,7 +210,7 @@ export const HomeHeader = styled.div`
     }
     @media ${device.desktopL} {
         flex-wrap: nowrap;
-        align-items: center;
+        align-items: normal;
     }
 `
 export const MyImg = styled.div`
@@ -231,12 +247,17 @@ export const MainHeader = styled.div`
             @media ${device.mobileL} {
                 font-size: 1.3rem; 
                 width: 180px;
+                padding: 0;
             }
             @media ${device.laptopL} {
+                width: 100%;
+                font-size: 4rem;
                 padding: 15px ;
             }
             @media ${device.desktopL} {
-                font-size: 4rem;  
+                width: 100%;
+                font-size: 4rem;
+                padding: 0;
             }
         }
 `
@@ -304,6 +325,10 @@ export const ProjectsContent = styled.div`
             margin-left: 100px;
             width: 100%;
         }
+    @media ${device.tablet} {
+        margin-left: 0;
+        width: 100%;
+    }
     & p {
         color: white;
         padding: 15%;
@@ -339,6 +364,9 @@ export const TechWrapper = styled.div`
             margin-left: 100px;
             width: 100%;
         }
+    @media ${device.tablet} {
+        margin-left: 0;
+    }
     & div:hover{
         transform: scale(1.1);
         transition-duration: .5s;
@@ -375,26 +403,27 @@ export const AboutMe__SectionWrapper = styled.div`
     @media ${device.mobileL} {
         margin-top: 100px;
         margin-left: 100px;
-        font-size: 1rem;  
+        /* font-size: 1rem;   */
         height: 70%;
     }
     @media ${device.tablet} {
-        font-size: 1rem;  
+        margin-left: 0;
+        /* font-size: 1rem;   */
         height: 90%;
         width: 50%;
     }
     @media ${device.laptop} {
-        font-size: 1rem;  
+        /* font-size: 1rem;   */
         height: 90%;
         width: 50%;
     }
     @media ${device.laptopL} {
-        font-size: 1rem;  
+        /* font-size: 1rem;   */
         height: 90%;
     }
     @media ${device.desktopL} {
-        font-size: 1rem;  
-        height: 70%;
+        /* font-size: 1rem;   */
+        height: 80%;
         width: 100%;
     }
 `
@@ -419,9 +448,12 @@ export const AboutMe__Header = styled.div`
     display: inline-block;
 
     @media ${device.mobileL} {
-            margin-left: 20px;
-            width: 100%;
-        }
+        margin-left: 20px;
+        width: 100%;
+    }
+    @media ${device.tablet} {
+        margin-left: 0;
+    }
         & h2{
             font-family: 'Mouse Memoirs', sans-serif;
             font-size: 2rem;
@@ -449,13 +481,19 @@ export const AboutMe__Description = styled.div`
         }
 
         @media ${device.desktopL} {
-            font-size: 2rem;  
+            font-size: 3rem;  
         }
     }
 `
 export const AboutME__FooterWrapper = styled.div`
     position: absolute;
     left: -160px;
+    width: 100%;
+    padding: 100px;
+
+    @media ${device.desktopL} {
+        margin-left: 100px;
+    }
 `
 
 // --------------- FOOTER --------------- //
@@ -477,26 +515,34 @@ export const Footer__Wrapper = styled.div`
         justify-content: space-between;
     }
     @media ${device.tablet} {
+        height: 250px;
         font-size: 1rem;
         margin-left: -30px;
         justify-content: space-between;
+        flex-direction: row;
     }
     @media ${device.laptop} {
+        height: 250px;
         font-size: 1rem;
         margin-left: -30px;
         justify-content: space-between;
+        flex-direction: row;
     }
     @media ${device.laptopL} {
+        height: 250px;
         font-size: 1.3rem;
         margin-left: -30px;
         justify-content: space-between;
+        flex-direction: row;
     }
     
     @media ${device.desktopL} {
-        width: 1700px;
+        height: 250px;
+        width: 100%;
         font-size: 2rem;
         margin-left: -30px;
         justify-content: space-between;
+        flex-direction: row;
     }
 
 
@@ -520,6 +566,22 @@ export const Footer__Links = styled.div`
         width: 100%;
         justify-content: center;
     }
+    @media ${device.tablet}{
+        width: 100%;
+        justify-content: flex-end;
+    }
+    /* @media ${device.laptop}{
+        width: 100%;
+        justify-content: center;
+    }
+    @media ${device.laptopL}{
+        width: 100%;
+        justify-content: center;
+    }
+    @media ${device.desktopL}{
+        width: 100%;
+        justify-content: flex-end;
+    } */
     & a{
         color: white;
 
