@@ -17,7 +17,10 @@ const Nav = () =>{
         {id: 3, nav : <AssignmentIndIcon/>, tooltip: "About Me", link:"/about-me", target: "_self"},
     ];
 
-    const navIconItems = navIconList.map((item) => <Tooltip title={item.tooltip} TransitionComponent={Zoom} enterDelay={100} placement="bottom" arrow><li key={item.link}><Link to={item.link} target={item.target}>{item.nav}</Link></li></Tooltip>)
+    const navIconItems = navIconList.map((item) => 
+        <Tooltip key={item.id} title={item.tooltip} TransitionComponent={Zoom} enterDelay={100} placement="bottom" arrow>
+            <li key={item.link}><Link to={item.link} target={item.target}>{item.nav}</Link></li>
+        </Tooltip>)
  
 
     return(

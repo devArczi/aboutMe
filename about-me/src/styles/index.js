@@ -362,7 +362,7 @@ export const TechWrapper = styled.div`
     color: white;
     fill: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     box-sizing: border-box;
 

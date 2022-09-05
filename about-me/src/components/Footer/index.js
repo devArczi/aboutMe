@@ -17,7 +17,7 @@ const Footer = () =>{
         {id: 2123, footerIcon : <ForwardToInboxIcon/>,  link:"mailto:devxarczi@gmail.com", target: "_blank"},
     ];
 
-    const footerLinksItems = footerLinksList.map((item) => <a href={item.link} target={item.target}>{item.footerIcon}</a>)
+    const footerLinksItems = footerLinksList.map((item) => <a key={item.id}href={item.link} target={item.target}>{item.footerIcon}</a>)
 
     return(
         <>
