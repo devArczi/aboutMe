@@ -251,7 +251,7 @@ export const MainHeader = styled.div`
             }
             @media ${device.laptopL} {
                 width: 100%;
-                font-size: 4rem;
+                font-size: 2rem;
                 padding: 15px ;
             }
             @media ${device.desktopL} {
@@ -268,6 +268,9 @@ export const HomeDescription = styled.div`
 
     @media ${device.mobileL} {
         margin: 0 100px 200px; 
+    }
+    @media ${device.tablet} {
+        margin: 0 0 200px; 
     }
     & p{
         padding: 0 40px;
@@ -309,8 +312,11 @@ export const ProjectsHeader = styled.div`
         }
     }
     @media ${device.mobileL} {
-            margin-left: 100px;
-        }
+        margin-left: 100px;
+    }
+    @media ${device.tablet} {
+        margin-left: 0;
+    }
     @media ${device.desktopL} {
             margin: 55px 0;
         }
@@ -361,9 +367,9 @@ export const TechWrapper = styled.div`
     box-sizing: border-box;
 
     @media ${device.mobileL} {
-            margin-left: 100px;
-            width: 100%;
-        }
+        margin-left: 100px;
+        width: 100%;
+    }
     @media ${device.tablet} {
         margin-left: 0;
     }
@@ -381,12 +387,15 @@ export const TechHeader = styled.div`
         }
     }
     @media ${device.mobileL} {
-            margin-left: 100px;
-            width: 100%;
-        }
+        margin-left: 100px;
+        width: 100%;
+    }
+    @media ${device.tablet} {
+        margin-left: 0;
+    }
     @media ${device.desktopL} {
-            margin: 55px 0;
-        }
+        margin: 55px 0;
+    }
 `
 
 // --------------- AboutMe --------------- //
@@ -404,12 +413,12 @@ export const AboutMe__SectionWrapper = styled.div`
         margin-top: 100px;
         margin-left: 100px;
         /* font-size: 1rem;   */
-        height: 70%;
+        height: 90%;
     }
     @media ${device.tablet} {
         margin-left: 0;
         /* font-size: 1rem;   */
-        height: 90%;
+        height: 100%;
         width: 50%;
     }
     @media ${device.laptop} {
@@ -419,7 +428,7 @@ export const AboutMe__SectionWrapper = styled.div`
     }
     @media ${device.laptopL} {
         /* font-size: 1rem;   */
-        height: 90%;
+        height: 70%;
     }
     @media ${device.desktopL} {
         /* font-size: 1rem;   */
@@ -435,11 +444,14 @@ export const AboutMe__HeaderWrapper = styled.div`
     box-sizing: border-box;
     
     @media ${device.mobileL} {
-            width: 100%;
-            padding: 0;
-        }
+        width: 100%;
+        padding: 0;
+    }
     @media ${device.laptop} {
-        padding: 100px 0 0 40px;
+        padding: 40px 0 0 40px;
+    }    
+    @media ${device.laptopL} {
+        padding: 20px 0 0 40px;
     }
 `
 export const AboutMe__Header = styled.div`
@@ -468,18 +480,30 @@ export const AboutMe__Description = styled.div`
     margin-bottom: 200px;
     width: 100%;
     white-space: pre-line;
+
+    @media ${device.mobileL} {
+        margin-bottom: 10px;
+    }
+    @media ${device.tablet} {
+        margin-bottom: 40px;
+    }
+    @media ${device.laptop} {
+        margin-bottom: 40px;
+    }
+    @media ${device.laptopL} {
+        margin-bottom: 50px;
+    }
     & p{
         padding: 0 40px;
         font-family: 'Mouse Memoirs', sans-serif;
-        font-size: 1rem;
         color: azure;
+
         @media ${device.mobileL} {
-            font-size: 0.8rem;  
+            font-size: 1rem;  
         }
-        @media ${device.desktopL} {
+        @media ${device.tablet} {
             font-size: 1.3rem;  
         }
-
         @media ${device.desktopL} {
             font-size: 3rem;  
         }
@@ -491,6 +515,15 @@ export const AboutME__FooterWrapper = styled.div`
     width: 100%;
     padding: 100px;
 
+    @media ${device.mobileL} {
+        margin-left: -60px;
+    }
+    @media ${device.tablet} {
+        margin-left: 60px;
+    }
+    @media ${device.tablet} {
+        padding: 0 100px 100px 100px;
+    }
     @media ${device.desktopL} {
         margin-left: 100px;
     }
@@ -517,21 +550,21 @@ export const Footer__Wrapper = styled.div`
     @media ${device.tablet} {
         height: 250px;
         font-size: 1rem;
-        margin-left: -30px;
+        margin-left: 0;
         justify-content: space-between;
         flex-direction: row;
     }
     @media ${device.laptop} {
         height: 250px;
         font-size: 1rem;
-        margin-left: -30px;
+        margin-left: 0;
         justify-content: space-between;
         flex-direction: row;
     }
     @media ${device.laptopL} {
         height: 250px;
         font-size: 1.3rem;
-        margin-left: -30px;
+        margin-left: 0;
         justify-content: space-between;
         flex-direction: row;
     }
