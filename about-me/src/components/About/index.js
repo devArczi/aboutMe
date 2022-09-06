@@ -35,6 +35,9 @@ const About = () => {
                         <li>Helpful</li>
                         <li>Patient</li>
                         </ul></pre>
+                <h3>Problem solving</h3>
+                Google --> Stackoverflow --> Friend from industry --> Friend from my team --> Team Leader
+                <p>I don't have commercial experience, but i like learn new things and technologies and work with other people to be better and better developer.</p>
                 </p>
             </AboutMe__Description>
             <AboutME__FooterWrapper>

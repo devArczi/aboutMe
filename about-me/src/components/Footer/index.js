@@ -1,5 +1,4 @@
 import React from "react";
-import styled, { keyframes } from 'styled-components'
 import GitHub from "@mui/icons-material/GitHub";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -8,7 +7,7 @@ import { Footer__Wrapper, Footer__Description, Footer__Links } from "../../style
 
 
 const Footer = () =>{
-    const descrString = ["coding < sleeping ? ☕️ : q(≧▽≦q) " , "Powered by Netlify"];
+    const descrString = ["coding < sleeping ? ☕️ : 📖 " , "Powered by Netlify"];
 
     const footerLinksList = [
         {id: 2120, footerIcon : <GitHub/>,  link:"https://github.com/devArczi" , target: "_blank"},

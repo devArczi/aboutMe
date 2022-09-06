@@ -401,40 +401,21 @@ export const TechHeader = styled.div`
 // --------------- AboutMe --------------- //
 
 export const AboutMe__SectionWrapper = styled.div`
-    height: 70%;
+    /* height: 100%; */
+    padding: 10px 20px 30px 10px;
     box-sizing: border-box;
-    position: absolute;
-    top: 30px;
-    max-width: 66.5%;
+    margin-top: 30px;
+    max-width: 100%;
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, .12);  
     
     @media ${device.mobileL} {
-        margin-top: 100px;
-        margin-left: 100px;
-        /* font-size: 1rem;   */
-        height: 90%;
+        margin: 100px 100px 0 100px;
     }
     @media ${device.tablet} {
         margin-left: 0;
-        /* font-size: 1rem;   */
-        height: 100%;
-        width: 50%;
     }
-    @media ${device.laptop} {
-        /* font-size: 1rem;   */
-        height: 90%;
-        width: 50%;
-    }
-    @media ${device.laptopL} {
-        /* font-size: 1rem;   */
-        height: 70%;
-    }
-    @media ${device.desktopL} {
-        /* font-size: 1rem;   */
-        height: 80%;
-        width: 100%;
-    }
+
 `
 
 export const AboutMe__HeaderWrapper = styled.div`
@@ -491,6 +472,9 @@ export const AboutMe__Description = styled.div`
         margin-bottom: 40px;
     }
     @media ${device.laptopL} {
+        margin-bottom: 45px;
+    }
+    @media ${device.desktopL} {
         margin-bottom: 50px;
     }
     & p{

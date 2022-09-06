@@ -1,6 +1,5 @@
 import { Tooltip, Zoom } from '@mui/material';
 import React from 'react';
-import styled from 'styled-components';
 import { CONTENTFULsvg, CSSsvg, Gatsbysvg, GITHUBsvg, HTMLsvg, JSsvg, NETLIFYsvg, NODEsvg, REACTsvg, SASSsvg, STYLEDCOMPSsvg, VSCODEsvg } from '../../assets/SVG';
 import { motion } from 'framer-motion';
 import Footer from '../Footer';
@@ -22,7 +21,7 @@ const TechStack = () => {
         {id: 1110,tech : <GITHUBsvg/>, tooltip: "GitHub"},
         {id: 1111,tech : <NETLIFYsvg/>, tooltip: "Netlify"},
     ];
-    const techIconItems = techIconList.map((item) => <Tooltip title={item.tooltip} TransitionComponent={Zoom} enterDelay={150} placement="bottom" arrow><SVGwrapper key={item.id}>{item.tech}</SVGwrapper></Tooltip>)
+    const techIconItems = techIconList.map((item) => <Tooltip key={item.id} title={item.tooltip} TransitionComponent={Zoom} enterDelay={150} placement="bottom" arrow><SVGwrapper>{item.tech}</SVGwrapper></Tooltip>)
     return (
         <TechSection as={motion.div}
         transition={{delay:0.5}}
